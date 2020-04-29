@@ -1,6 +1,13 @@
  function random(){
 
-var cars = ["Zebra", "Verde", "Specchio"];
+var words = [];
 
-document.getElementById("one").innerHTML = cars[Math.floor(Math.random() * 3)];
+$.get('/aa.txt', function(response) {
+  console.log('starting response')
+  words = response.split('\n');
+  console.log(words[0])
+  document.getElementById("one").innerHTML = words[Math.floor(Math.random() * words.length)];
+})
+
+
 }
