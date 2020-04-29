@@ -1,20 +1,22 @@
  function random(){
 
-var words = [];
-var adj = [];
+window.words = [];
+window.adj = [];
 
 $.get('/nouns.txt', function(response) {
   console.log('starting response noun')
-  words = response.split('\n');
-  console.log(words[0])
-  document.getElementById("one").innerHTML = words[Math.floor(Math.random() * words.length)];
+  window.words = response.split('\n');
+  console.log(window.words[0])
+  document.getElementById("one").innerHTML = window.words[Math.floor(Math.random() * window.words.length)];
 })
- 
+
+console.log(window.words[0])
+
 $.get('/aa.txt', function(response) {
   console.log('starting response adj')
-  adj = response.split('\n');
-  console.log(words[0])
-  document.getElementById("two").innerHTML = adj[Math.floor(Math.random() * adj.length)];
+  window.adj = response.split('\n');
+  console.log(window.adj[0])
+  document.getElementById("two").innerHTML = window.adj[Math.floor(Math.random() * window.adj.length)];
 })
-  
+  console.log(window.adj[0])
 }
