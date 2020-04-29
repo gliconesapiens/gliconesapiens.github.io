@@ -16,7 +16,7 @@ $.get('/aa.txt', function(response) {
   console.log('starting response adj')
   adj = response.split('\n');
   console.log(words[0])
-  document.getElementById("two").innerHTML = adj[Math.floor(Math.random() * words.length)];
+  document.getElementById("two").innerHTML = adj[Math.floor(Math.random() * adj.length)];
 })
   
 
