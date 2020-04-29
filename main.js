@@ -1,4 +1,4 @@
- $( document ).ready(function random(){
+function random(){
 
 $.get('/nouns.txt', function(response) {
   console.log('starting response noun')
@@ -15,6 +15,6 @@ $.get('/aa.txt', function(response) {
   //document.getElementById("two").innerHTML = window.adj[Math.floor(Math.random() * window.adj.length)];
 })
   console.log(window.current_adj);
-  
+
   document.getElementById("one").innerHTML = window.current_word.concat(" ", window.current_adj)
-});
+}
