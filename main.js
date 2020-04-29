@@ -9,9 +9,7 @@ $.get('/nouns.txt', function(response) {
   console.log(words[0])
   document.getElementById("one").innerHTML = words[Math.floor(Math.random() * words.length)];
 })
-  
-  console.log(words[0])
-  
+ 
 $.get('/aa.txt', function(response) {
   console.log('starting response adj')
   adj = response.split('\n');
@@ -19,6 +17,4 @@ $.get('/aa.txt', function(response) {
   document.getElementById("two").innerHTML = adj[Math.floor(Math.random() * adj.length)];
 })
   
-
-
 }
